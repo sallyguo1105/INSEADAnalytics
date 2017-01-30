@@ -165,21 +165,21 @@ print(m1,'chart')
 <br>
 
 **Your Answers here:**
-1. 6
-2. 0.93 (5yr T notes US and 10yr T notes)
-3. Component 1:govenment bonds
-   Component 2:Currencies and Commodities
-   Component 3:European Stock Market
-   Component 4:US Stock Market
-   Component 5:European Bonds and Rates
-   Component 6:Oil & Gas
-   Component 7:Metals
-   Component 8:Agriculture product
-   Component 9:Precious Metals
-   Component 10:Asian Stock Market
-4. 
-a) pre-crisis years
-
+<br>1. 6
+<br>2. 0.93 (5yr T notes US and 10yr T notes)
+<br>3. Component 1:govenment bonds
+<br>   Component 2:Currencies and Commodities
+<br>   Component 3:European Stock Market
+<br>   Component 4:US Stock Market
+<br>   Component 5:European Bonds and Rates
+<br>   Component 6:Oil & Gas
+<br>   Component 7:Metals
+<br>   Component 8:Agriculture product
+<br>   Component 9:Precious Metals
+<br>   Component 10:Asian Stock Market
+<br>4. 
+<br>a) pre-crisis years
+<br>
 ```{r echo=FALSE, comment=NA, warning=FALSE, message=FALSE, results='asis'}
 pre_crisis_data = futures_data[as.Date(rownames(futures_data)) > "2002-11-01" & as.Date(rownames(futures_data)) < "2007-10-01", ]
 Variance_Explained_Table_results2<-PCA(pre_crisis_data, graph=FALSE)
@@ -209,7 +209,7 @@ m1<-gvisTable(show_data,options=list(showRowNumber=TRUE,width=1220, height=min(4
 print(m1,'chart')
 ```
 <br>
-b) crisis years
+<br>b) crisis years
 ```{r echo=FALSE, comment=NA, warning=FALSE, message=FALSE, results='asis'}
 crisis_data = futures_data[as.Date(rownames(futures_data)) > "2007-10-01" & as.Date(rownames(futures_data)) < "2009-03-01", ]
 Variance_Explained_Table_results3<-PCA(crisis_data, graph=FALSE)
@@ -238,7 +238,8 @@ colnames(show_data)<-c("Variables",colnames(Rotated_Factors))
 m1<-gvisTable(show_data,options=list(showRowNumber=TRUE,width=1220, height=min(400,27*(nrow(show_data)+1)),allowHTML=TRUE,page='disable'))
 print(m1,'chart')
 ```
-5. The financial products are more correlated during crisis years; the market can be better explained with fewer factors.
+<br>
+<br>5. The financial products are more correlated during crisis years; the market can be better explained with fewer factors.
 <hr>
 
 ### A Simple Futures Trend Following Strategy
@@ -317,8 +318,8 @@ How does this compare with **existing CTA products** such as [this one from Soci
 <br>
 
 **Your Answers here:**
-1. The code collects the moving average signals and make investment decisions based on the signs.
-2. By changing the code to MAfreq<-seq(10,250,by=20), we will get a return of Ret:5.7, Vol:7.7, Sharpe:0.74, DD: 21.9 
+<br>1. The code collects the moving average signals and make investment decisions based on the signs.
+<br>2. By changing the code to MAfreq<-seq(10,250,by=20), we will get a return of Ret:5.7, Vol:7.7, Sharpe:0.74, DD: 21.9 
 
 <br>
 <br>
